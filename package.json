@@ -1,0 +1,31 @@
+{
+  "name": "device-remote-client",
+  "version": "0.0.0",
+  "description": "device remote client",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivan-bausov/device-remote-client.git"
+  },
+  "keywords": [
+    "device",
+    "remote",
+    "client",
+    "device",
+    "test",
+    "stand"
+  ],
+  "author": "Ivan Bausov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivan-bausov/device-remote-client/issues"
+  },
+  "homepage": "https://github.com/ivan-bausov/device-remote-client#readme",
+  "devDependencies": {
+    "gulp": "=3.9.1",
+    "typescript": "=2.1.5"
+  }
+}
