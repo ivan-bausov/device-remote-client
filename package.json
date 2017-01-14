@@ -26,6 +26,8 @@
   "homepage": "https://github.com/ivan-bausov/device-remote-client#readme",
   "devDependencies": {
     "gulp": "=3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-typescript": "^3.1.4",
     "jasmine": "^2.5.3",
     "typescript": "=2.1.5"
   }
