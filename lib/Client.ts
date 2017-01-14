@@ -13,4 +13,8 @@ export default class Client implements DRC.Client {
     public wait(state:any, timeout_ms?:number):DRC.Client {
         return this;
     }
+
+    public done(cb:()=>void):DRC.Client {
+        return this;
+    }
 }
