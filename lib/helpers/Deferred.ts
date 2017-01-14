@@ -20,8 +20,8 @@ export default class Deferred<T> {
         return this.promise;
     }
 
+    public promise:Promise<T>;
+
     private resolve_promise:(param:T) => void;
     private reject_promise:(error:T) => void;
-
-    private promise:Promise<T>;
 }
