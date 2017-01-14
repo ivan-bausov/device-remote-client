@@ -1,5 +1,5 @@
 import Client from "../../lib/Client";
-import {Key} from "../../lib/Client";
+import {DRC} from "../../lib/types/interfaces";
 
 /**
  * @author Ivan Bausov
@@ -10,6 +10,6 @@ import {Key} from "../../lib/Client";
 describe('Client', () => {
     it('proof of work', () => {
         let client:DRC.Client = new Client();
-        expect(client.key(Key.OK)).toBe(client);
+        expect(client.key(DRC.Key.OK)).toBe(client);
     });
 });
