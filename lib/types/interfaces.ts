@@ -20,4 +20,9 @@ export namespace DRC {
         key(code:Key):Client;
         wait(state:any, timeout_ms?:number):Client;
     }
+
+    export const RemoteControl:string = 'RemoteControl';
+    export interface RemoteControl {
+        key(code:Key):Promise<void>;
+    }
 }
