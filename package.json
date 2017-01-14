@@ -25,11 +25,14 @@
   },
   "homepage": "https://github.com/ivan-bausov/device-remote-client#readme",
   "devDependencies": {
-    "@types/jasmine": "^2.5.40",
+    "@types/jasmine": "=2.5.40",
     "gulp": "=3.9.1",
-    "gulp-clean": "^0.3.2",
-    "gulp-typescript": "^3.1.4",
-    "jasmine": "^2.5.3",
+    "gulp-clean": "=0.3.2",
+    "gulp-typescript": "=3.1.4",
+    "jasmine": "=2.5.3",
     "typescript": "=2.1.5"
+  },
+  "dependencies": {
+    "intakejs": "=0.3.0"
   }
 }
