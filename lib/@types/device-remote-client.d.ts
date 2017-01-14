@@ -5,15 +5,10 @@
  */
 
 declare namespace DRC {
+    export type Key = 'Key';
+
     export interface Client {
-        click():Client;
-
-        left():Client;
-        right():Client;
-        up():Client;
-        down():Client;
-
-        back():Client;
-        waitForState(state:any):Client;
+        key(code:Key):Client;
+        wait(state:any, timeout_ms?:number):Client;
     }
 }

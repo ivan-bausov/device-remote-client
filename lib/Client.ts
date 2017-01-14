@@ -4,33 +4,23 @@
  * Time: 16:56
  */
 
+export type Key = DRC.Key;
+
+export const Key = {
+    UP: 'up' as Key,
+    RIGHT: 'right' as Key,
+    DOWN: 'down' as Key,
+    LEFT: 'left' as Key,
+    OK: 'ok' as Key,
+    BACK: 'back' as Key
+};
+
 export default class Client implements DRC.Client {
-    public click():DRC.Client {
+    public key(code:Key):DRC.Client {
         return this;
     }
 
-    public left():DRC.Client {
+    public wait(state:any, timeout_ms?:number):DRC.Client {
         return this;
     }
-
-    public right():DRC.Client {
-        return this;
-    }
-
-    public up():DRC.Client {
-        return this;
-    }
-
-    public down():DRC.Client {
-        return this;
-    }
-
-    public back():DRC.Client {
-        return this;
-    }
-
-    public waitForState(state:any):DRC.Client {
-        return this;
-    }
-
 }

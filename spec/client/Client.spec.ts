@@ -1,4 +1,5 @@
 import Client from "../../lib/Client";
+import {Key} from "../../lib/Client";
 
 /**
  * @author Ivan Bausov
@@ -9,6 +10,6 @@ import Client from "../../lib/Client";
 describe('Client', () => {
     it('proof of work', () => {
         let client:DRC.Client = new Client();
-        expect(client.click()).toBe(client);
+        expect(client.key(Key.OK)).toBe(client);
     });
 });
