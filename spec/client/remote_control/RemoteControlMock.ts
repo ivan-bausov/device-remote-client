@@ -23,5 +23,9 @@ export default class RemoteControlMock implements DRC.RemoteControl {
         return deferred.promise;
     }
 
+    public last():RemoteControlMockRequest {
+        return this.requests[this.requests.length - 1];
+    }
+
     public requests:RemoteControlMockRequest[] = [];
 }

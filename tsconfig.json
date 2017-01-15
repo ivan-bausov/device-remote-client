@@ -8,8 +8,6 @@
     "noImplicitAny": true,
     "noUnusedLocals": false,
     "strictNullChecks": false,
-    "importHelpers": true,
-    "noEmitHelpers": true,
     "outDir": "build",
     "typeRoots": [
       "node_modules/@types",

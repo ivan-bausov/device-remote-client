@@ -7,21 +7,23 @@
 export default class Deferred<T> {
     constructor() {
         this.promise = new Promise<T>((resolve:(param:T)=>void, reject:(error:any)=>void) => {
-            this.resolve_promise = (param:T) => resolve(param);
-            this.reject_promise = (error:any) => reject(error);
+            this.resolve_promise = (data:T) => resolve(data);
+            this.reject_promise = (data:any) => reject(data);
         });
     }
 
-    public resolve():Promise<T> {
+    public resolve(data?:T):Promise<T> {
+        this.resolve_promise(data);
         return this.promise;
     }
 
-    public reject():Promise<T> {
+    public reject(data?:any):Promise<T> {
+        this.reject_promise(data);
         return this.promise;
     }
 
     public promise:Promise<T>;
 
-    private resolve_promise:(param:T) => void;
-    private reject_promise:(error:T) => void;
+    private resolve_promise:(data:T) => void;
+    private reject_promise:(data:T) => void;
 }
