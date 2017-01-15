@@ -5,6 +5,7 @@
  */
 import {DRC} from "./types/interfaces";
 import {Inject} from "intakejs";
+import Deferred from "./helpers/Deferred";
 
 export default class Client implements DRC.Client {
     public key(code:DRC.Key):DRC.Client {
@@ -13,6 +14,9 @@ export default class Client implements DRC.Client {
     }
 
     public wait(state:any, timeout_ms?:number):DRC.Client {
+        let wait_deferred:Deferred<void> = new Deferred<void>();
+        this.addAction(() => wait_deferred.promise);
+        this.feedback_system.once(state, () => wait_deferred.resolve());
         return this;
     }
 
@@ -31,6 +35,9 @@ export default class Client implements DRC.Client {
 
     @Inject(DRC.RemoteControl)
     private remote_control:DRC.RemoteControl;
+
+    @Inject(DRC.FeedbackSystem)
+    private feedback_system:DRC.FeedbackSystem;
 
     private promise:Promise<void>|void;
 }

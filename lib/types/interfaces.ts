@@ -26,4 +26,9 @@ export namespace DRC {
     export interface RemoteControl {
         key(code:Key):Promise<void>;
     }
+
+    export const FeedbackSystem:string = 'FeedbackSystem';
+    export interface FeedbackSystem {
+        once(state:any, cb:() => void):void;
+    }
 }
